@@ -1,0 +1,197 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.navbar {
+  overflow: hidden;
+  background-color: #ffffff;
+  height: 80px;
+}
+
+
+.logo {
+  float: left;
+  padding: 15px 20px;
+  font-size: 20px;
+  color: rgb(0, 0, 0);
+}
+.logo img {
+  width: 70px; 
+  height: auto; 
+}
+
+
+.navbar-right {
+  float: right;
+}
+
+.dropdown {
+  float: right;
+  overflow: hidden;
+}
+
+.dropbtn {
+  font-size: 16px;
+  color: rgb(0, 0, 0);
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  background-color: inherit;
+}
+
+.dropbtn:hover {
+  background-color: #ff0000;
+  color: black;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.container {
+  background: #ddd;
+  padding: 15px;
+  margin: 15px auto;
+  max-width: 1000px;
+  display: grid;
+  gap: 15px;
+  /* hvis man indsætter et punktum i sit grid-area, kommer der tim "white space" på den plads */
+  grid-template-areas:
+      "logo   nav    nav     nav"
+      ".      main   banner  banner"
+      ".      main   .       banner2"
+      "footer footer footer  footer";
+}
+.grid-items {
+  background: lightgreen;
+  padding: 15px;
+  color: white;
+  font-size: 2em;
+}
+
+.grid-items img {
+  max-width: 50%; /* Ensures the image doesn't exceed the width of its container */
+  height: auto; /* Allows the image to maintain its aspect ratio */
+}
+
+.one {
+  grid-area: logo;
+}
+.two {
+  grid-area: nav;
+}
+.three {
+  grid-area: main;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+}
+.four {
+  grid-area: banner;
+}
+.five {
+  grid-area: banner2;
+}
+.six {
+  grid-area: footer;
+}
+.icon {
+  background: green;
+  padding: 15px;
+  width: 35px;
+  text-align: center;
+}
+
+footer {
+  background-color: #ffffff;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+  position: fixed; 
+  bottom: 0; 
+  width: 100%; 
+}
+
+footer img {
+  width: 70px; 
+  height: auto; 
+  margin-bottom: 3px; 
+}
+
+
+@media screen and (min-width: 785px) {
+  .container {
+      display: flex;
+      flex-wrap: wrap;
+  }
+  .box-1 {
+      width: 100%;
+      flex-grow: 8;
+      flex-basis: 0;
+  }
+  .box-2, .box-3 {
+      flex-grow: 8;
+      flex-basis: 0;
+  }
+  .box-2 {
+      flex-direction: row-reverse;
+  }
+}
+
+@media screen and (min-width: 1089px) {
+  .container {
+      max-width: 1155px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      margin-bottom: 50px; 
+  }
+  .box-1 {
+      order: 1; 
+      flex-basis: 100%; 
+  }
+  .box-2 {
+      order: 2; 
+      flex-basis: calc(50% - 30px); 
+  }
+  .box-3 {
+      order: 3; 
+      flex-basis: calc(50% - 30px); 
+  }
+}
+
+
+@media screen and (max-width: 785px) {
+  .container {
+      display: flex;
+      flex-direction: column;
+  }
+  .box-2 {
+      order: 1;
+  }
+  .box-1 {
+      order: -1; 
+  }
+}
+
+
