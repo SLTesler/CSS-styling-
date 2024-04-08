@@ -1,0 +1,46 @@
+body, h1, h2, h3, h4, h5, h6, p, a, li, span, button {
+    color: #000;
+    font-family: 'Courier New', Courier, monospace;      
+}
+
+.footer,
+.navbar {
+    background: linear-gradient(90deg, #5eecff, #71ec9a);
+    color: #fff; 
+}
+
+.navbar img {
+    max-width: 60px; 
+    height: auto;
+    margin: 0 auto; 
+}
+
+.btn {
+    background: #f5f12b;
+    border: 2px solid #000;
+    color: #000;
+}
+
+.btn:hover {
+    background: #d36c17;
+}
+
+.card .btn:active {
+    background-color: #fff;
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 10px;
+  }
+  
