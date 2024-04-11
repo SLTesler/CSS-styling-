@@ -1,0 +1,50 @@
+body {
+    background-color: #000; /* Set background color to black */
+    color: #fff; /* Set text color to white */
+    font-family: arial;
+}
+
+.footer,
+.navbar {
+    background: linear-gradient(90deg, #436cf3, #c64ffd);
+    color: #fff; 
+}
+
+
+.navbar-logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-logo img {
+    max-width: 60px;
+    height: auto;
+    margin: 0 auto;
+}
+
+
+.btn {
+    background: #000000;
+    border: 2px solid #c64ffd;
+    color: #c64ffd;
+}
+
+.btn:hover {
+    background: #d36c17;
+}
+
+.card .btn:active {
+    background-color: #fff;
+}
+.image-container {
+    position: relative;
+}
+
+.text-overlay {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 10px;
+}
